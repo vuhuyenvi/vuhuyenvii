@@ -1,0 +1,88 @@
+﻿@model _2001216311_VuThiHuyenVi_DoAn.Models.User
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+<link href="~/Css/account.css" rel="stylesheet" />
+<link href="~/Css/header2.css" rel="stylesheet" />
+<link href="~/Css/bootstrap9c74.css" rel="stylesheet" />
+<link href="~/Css/main9c74.css" rel="stylesheet" />
+
+<div class="BACKGROUD">
+    <ul class="breadcrumb">
+        <li class="home">
+            <a href="/"><span>Trang chủ</span></a>
+            <span class="mr_lr">&nbsp;/&nbsp;</span>
+        </li>
+        <li><strong><span style="color: #FFAB00">Đăng ký tài khoản</span></strong></li>
+    </ul>
+</div>
+<section class="section">
+    <div class="container">
+        <div class="wrap_background_aside padding-bottom-40 page_login">
+            <div class="row">
+                <div class="col-12 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
+                    <div class="page-login">
+                        <div id="login">
+                            <h2>
+                                Thông tin cá nhân
+                            </h2>
+                            @*<form method="post" action="/Home/Index" id="customer_register" accept-charset="UTF-8">*@
+                                @using (Html.BeginForm("Register", "User", FormMethod.Post))
+                                {
+                                    <input name="Role" type="hidden" value="user"><input name="utf8" type="hidden" value="true"><input type="hidden" id="Token-dadacc71bab64e4b94527c2f1abfc11b" name="Token" value="HFZjk2dUAQN34wSQkDSBMSSVFVLls1Qkt2ZX9HMnlcGXZ6OFRqGAhLN3gtWGMWJ39xd0IgAkpFQREXUmZCFntHVy9zZnB8fzpqIRRJLTMgUTsrfRwlGBs2dmAPXxkDQlUUShwvSXF8VStxPxIjbQcBcGM0WTRfJic0di8SJRsmN35EXQkQTgsDQgZJdApqbV9zZ2tCSWRbE20TaCk-Yi0pSh8BFWEPVB8PJAolay4SQ11JBWZEEw">
+                                    <script src="../../www.google.com/recaptcha/apif78f.js?render=6Ldtu4IUAAAAAMQzG1gCw3wFlx_GytlZyLrXcsuK"></script>
+                                    <script>grecaptcha.ready(function () { grecaptcha.execute("6Ldtu4IUAAAAAMQzG1gCw3wFlx_GytlZyLrXcsuK", { action: "customer_register" }).then(function (token) { document.getElementById("Token-dadacc71bab64e4b94527c2f1abfc11b").value = token }); });</script>
+                                    <div class="form-signup " style="color:red;">
+
+                                    </div>
+                                    <div class="form-signup clearfix">
+
+                                        <div class="row">
+                                            @*<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                        <fieldset class="form-group">
+                            <label>Email <span class="required">*</span></label>
+                            <input type="email" pattern="[a-z0-9._%+-]+[a-z0-9.-]+\.[a-z]{2,63}$" class="form-control form-control-lg" value="" name="email" id="email" placeholder="Email" required="">
+                        </fieldset>
+                    </div>*@
+                                            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                                                <fieldset class="form-group">
+                                                    @Html.LabelFor(model => model.UserName)
+                                                    @Html.TextBoxFor(model => model.UserName, new { @class = "form-control" })
+                                                    @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+                                                </fieldset>
+                                                <fieldset class="form-group">
+                                                    @Html.LabelFor(model => model.Password)
+                                                    @Html.TextBoxFor(model => model.Password, new { @class = "form-control", type = "password" })
+                                                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                                                </fieldset>
+                                                <fieldset class="form-group">
+                                                    @Html.Label("Retype Password", new { @for = "retypePassword" })
+                                                    @Html.TextBox("retypePassword", "", new { @class = "form-control", type = "password" })
+                                                    @Html.ValidationMessage("retypePassword", "", new { @class = "text-danger" })
+                                                </fieldset>
+                                                <fieldset class="form-group">
+                                                    @Html.LabelFor(model => model.EmailAddress)
+                                                    @Html.TextBoxFor(model => model.EmailAddress, new { @class = "form-control" })
+                                                    @Html.ValidationMessageFor(model => model.EmailAddress, "", new { @class = "text-danger" })
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                        <div class="section margin-top-10 button_bottom">
+                                            <button type="submit" value="Đăng ký" class="btn  btn-style btn_50 btn_register">Đăng ký</button>
+                                            <span class="or">
+                                                Bạn đã có tài khoản? Đăng nhập
+                                                <a href="/User/Login/Index" style="text-decoration: underline;" class="btn-link-style  btn-style margin-right-0">tại đây</a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                }
+                                @*</form>*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

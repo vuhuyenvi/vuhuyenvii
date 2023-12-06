@@ -1,0 +1,318 @@
+﻿@model List<_2001216311_VuThiHuyenVi_DoAn.Models.SanPhamm>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+<link href="~/Css/bootstrap.css" rel="stylesheet" />
+<link href="~/Css/collect.css" rel="stylesheet" />
+<link href="~/Css/header2.css" rel="stylesheet" />
+<link href="~/Css/SB.css" rel="stylesheet" />
+<link href="~/Css/collect.css" rel="stylesheet" />
+<link href="~/Css/Respond1.css" rel="stylesheet" />
+<link href="~/Css/form2.css" rel="stylesheet" />
+<link href="~/Css/StyleSheet1.css" rel="stylesheet" />
+<link href="~/Css/TinTucchuan.css" rel="stylesheet" />
+
+<link href="~/Css/StyleSheet1.css" rel="stylesheet" />
+<link href="~/Css/header1.css" rel="stylesheet" />
+<link href="~/Css/Contact.css" rel="stylesheet" />
+<link href="~/Css/Respond.css" rel="stylesheet" />
+<link href="~/Css/form1.css" rel="stylesheet" />
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Lấy danh sách sản phẩm
+        var products = document.getElementById("doca");
+
+        // Lắng nghe sự kiện khi người dùng nhấp vào các liên kết sắp xếp
+        document.querySelectorAll(".content_ul a").forEach(function (link) {
+            link.addEventListener("click", function (e) {
+                e.preventDefault();
+
+                // Lấy loại sắp xếp từ thuộc tính data-sort-type
+                var sortType = link.getAttribute("data-sort-type");
+
+                // Gọi action Index với sortType tương ứng
+                window.location.href = "/SanPham/Index?sortOrder=" + sortType;
+            });
+        });
+    });
+
+</script>
+<div class="BACKGROUD">
+    <ul class="breadcrumb">
+        <li class="home">
+            <a href="/"><span>Trang chủ</span></a>
+            <span class="mr_lr">&nbsp;/&nbsp;</span>
+        </li>
+        <li><strong><span style="color: #FFAB00">Sản phẩm</span></strong></li>
+    </ul>
+</div>
+<div class="section wrap_background padding-bottom-40">
+    <div class="container ">
+        <div class="bg_collection section">
+            <div class="row">
+                <aside class="dqdt-sidebar sidebar left-content col-xl-3 col-lg-3 col-md-4 col-sm-4" style="margin-left:-100px;">
+                    <div class="wrap_background_aside asidecollection">
+
+                        <aside class="aside-item sidebar-category collection-category">
+                            <div class="aside-title">
+                                <h2 class="title-head margin-top-0 cate"><span>Danh mục sản phẩm</span></h2>
+                            </div>
+                            <div class="aside-content">
+                                <nav class="nav-category navbar-toggleable-md">
+                                    <ul class="nav navbar-pills">
+
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/">
+                                                <span>Trang chủ</span>
+
+                                            </a>
+
+                                        </li>
+                                        <li class="nav-item ">
+                                            <a href="/collections/all" class="nav-link"><span>Sản phẩm</span></a>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/bang-gia">
+                                                <span>Bảng giá</span>
+
+                                            </a>
+
+                                        </li>
+
+
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/tin-tuc">
+                                                <span>Tin thú cưng</span>
+
+                                            </a>
+
+                                        </li>
+
+
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/dat-lich">
+                                                <span>Đặt lịch</span>
+
+                                            </a>
+
+                                        </li>
+
+
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/lien-he">
+                                                <span>Liên hệ</span>
+
+                                            </a>
+
+                                        </li>
+
+
+                                    </ul>
+                                </nav>
+                            </div>
+                        </aside>
+
+                        <div class="filter-content aside-filter">
+                            <div class="filter-container">
+                                <div class="filter-container__selected-filter clearfix" style="display: none;">
+                                    <div class="filter-container__selected-filter-header clearfix">
+                                        <span class="filter-container__selected-filter-header-title"><i class="fa fa-arrow-left hidden-sm-up"></i> Bạn chọn</span>
+                                        <a href="javascript:void(0)" onclick="clearAllFiltered()" class="filter-container__clear-all">Bỏ hết <i class="fa fa-angle-right"></i></a>
+                                    </div>
+                                    <div class="filter-container__selected-filter-list">
+                                        <ul></ul>
+                                    </div>
+                                </div>
+
+                                <!-- Lọc Thương hiệu -->
+
+
+
+                                <aside class="aside-item filter-sidebar filter-vendor">
+                                    <div class="aside-title">
+                                        <h2 class="title-filter title-head margin-top-0">
+                                            <span>
+                                                Chọn thương hiệu
+                                            </span>
+                                        </h2>
+                                    </div>
+                                    <div class="aside-content margin-top-0 filter-group">
+                                        <form action="/SanPham/Index">
+                                            <div class="search-collection">
+                                                <input type="search" id="search" name="search" value="@ViewBag.Search" placeholder="Bạn muốn tìm gì?" class="form-control filter-vendor-list">
+                                                <div class="button_search">
+                                                    <button type="submit" class="btn btn-default">
+                                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-search fa-w-16"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" class=""></path></svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <ul>
+                                            <li class="filter-item filter-item--check-box filter-item--green ">
+                                                <span>
+                                                    <label for="filter-doca" class="abc" onClick="ChangeProductList('doca', this)">
+                                                        <i class="fa"></i>
+                                                        Doca
+                                                    </label>
+                                                </span>
+                                            </li>
+                                            <li class="filter-item filter-item--check-box filter-item--green ">
+                                                <span>
+                                                    <label for="filter-fibs" class="abc" onClick="ChangeProductList('FIBS', this)">
+                                                        <i class="fa"></i>
+                                                        FIBs
+                                                    </label>
+                                                </span>
+                                            </li>
+                                            <li class="filter-item filter-item--check-box filter-item--green ">
+                                                <span>
+                                                    <label for="filter-pedigree" class="abc">
+                                                        <i class="fa"></i>
+                                                        Pedigree
+                                                    </label>
+                                                </span>
+                                            </li>
+                                            <li class="filter-item filter-item--check-box filter-item--green ">
+                                                <span>
+                                                    <label for="filter-royal-canin" class="abc">
+                                                        <i class="fa"></i>
+                                                        Royal Canin
+                                                    </label>
+                                                </span>
+                                            </li>
+                                            <li class="filter-item filter-item--check-box filter-item--green ">
+                                                <span>
+                                                    <label for="filter-smartheart" class="abc" onClick="ChangeProductList('smartheart', this)">
+                                                        <i class="fa"></i>
+                                                        Smartheart
+                                                    </label>
+                                                </span>
+                                            </li>
+                                            <li class="filter-item filter-item--check-box filter-item--green ">
+                                                <span>
+                                                    <label for="filter-tropiclean" class="abc">
+                                                        <i class="fa"></i>
+                                                        Tropiclean
+                                                    </label>
+                                                </span>
+                                            </li>
+                                            <li class="filter-item filter-item--check-box filter-item--green ">
+                                                <span>
+                                                    <label class="abc" for="filter-zenith" onClick="ChangeProductList('zenith', this)">
+                                                        <i class="fa"></i>
+                                                        Zenith
+                                                    </label>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </aside>
+                            </div>
+                        </div>
+                        <div class="aside-item aside-banner">
+                            <a href="#" class="img_banner" title="Banner_collection">
+                                <img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="//bizweb.dktcdn.net/100/432/370/themes/894869/assets/banner_collection.png?1676276556806" alt="Banner_collection" />
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+                <div class="main_container collection right-content col-xl-9 col-lg-9 col-md-12 col-sm-12" style="margin-right:-1000px;">
+                    <h1 class="collectiontitle">Thức ăn cho chó</h1>
+                    <div class="category-products products">
+
+                        <div class="section">
+                            <div class="sortPagiBar clearfix">
+                                <div class="sort-cate clearfix">
+                                    <div id="sort-by">
+                                        <label class="left hidden">Xếp theo</label>
+                                        <ul class="ul_col">
+                                            <li>
+                                                <span>Sắp xếp theo</span>
+                                                <ul class="content_ul">
+                                                    <li><a href="javascript:;" data-sort-type="default">Mặc định</a></li>
+                                                    <li><a href="javascript:;" data-sort-type="az">A &rarr; Z</a></li>
+                                                    <li><a href="javascript:;" data-sort-type="za">Z &rarr; A</a></li>
+                                                    <li><a href="javascript:;" data-sort-type="gia_tang">Giá tăng dần</a></li>
+                                                    <li><a href="javascript:;" data-sort-type="gia_giam">Giá giảm dần</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <section class="products-view products-view-grid collection_reponsive list_hover_pro">
+                            <div class="row" id="doca">
+                                @foreach (var item in Model)
+                                {
+                                    <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 product-col">
+                                        <div class="item_product_main margin-bottom-40">
+                                            <form action="/cart/add" method="post" class="variants wishItem" data-id="product-actions-22418973" enctype="multipart/form-data">
+                                                <div class="product-thumbnail">
+                                                    <a class="product_overlay" href="/thuc-an-hat-mem-cho-cho-zenith" title="Thức ăn hạt mềm cho chó Zenith"></a>
+                                                    <a class="image_thumb" href="/SanPham/Index?sortOrder=@ViewBag.SortOrder&page=1" title="Thức ăn hạt mềm cho chó Zenith">
+                                                        <img class="lazyload" width="10" height="10" src="@item.HinhAnh" alt="Thức ăn hạt mềm cho chó Zenith">
+                                                    </a>
+                                                    <div class="product-action">
+                                                        <div class="group_action">
+
+                                                            <a title="Xem nhanh" href="/thuc-an-hat-mem-cho-cho-zenith" data-handle="thuc-an-hat-mem-cho-cho-zenith" class="xem_nhanh btn-circle btn-views btn_view btn right-to quick-view">
+                                                                <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="search-plus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-search-plus fa-w-16"><path fill="currentColor" d="M312 196v24c0 6.6-5.4 12-12 12h-68v68c0 6.6-5.4 12-12 12h-24c-6.6 0-12-5.4-12-12v-68h-68c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h68v-68c0-6.6 5.4-12 12-12h24c6.6 0 12 5.4 12 12v68h68c6.6 0 12 5.4 12 12zm196.5 289.9l-22.6 22.6c-4.7 4.7-12.3 4.7-17 0L347.5 387.1c-2.3-2.3-3.5-5.3-3.5-8.5v-13.2c-36.5 31.5-84 50.6-136 50.6C93.1 416 0 322.9 0 208S93.1 0 208 0s208 93.1 208 208c0 52-19.1 99.5-50.6 136h13.2c3.2 0 6.2 1.3 8.5 3.5l121.4 121.4c4.7 4.7 4.7 12.3 0 17zM368 208c0-88.4-71.6-160-160-160S48 119.6 48 208s71.6 160 160 160 160-71.6 160-160z" class=""></path></svg>
+                                                                <span class="text">Xem nhanh</span>
+                                                            </a>
+
+
+                                                            @*<form action="/Cart/Add" method="post">*@
+                                                                <input type="hidden" name="variantId" value="48898557" />
+                                                                <button class="btn btn-cart btn-left btn btn-views left-to" type="submit">
+                                                                    <svg viewBox="0 0 1024 1024" width="20" height="20"> <!-- SVG code here --> </svg>
+                                                                    <span class="text">Thêm vào giỏ hàng</span>
+                                                                </button>
+                                                             @*</form>*@
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-info">
+                                                    <h3 class="product-name"><a href="/thuc-an-hat-mem-cho-cho-zenith" title="Thức ăn hạt mềm cho chó Zenith">@item.NameSP</a></h3>
+                                                    <div class="price-box">
+                                                        <span class="price">@item.GiaMoi đ</span>
+                                                        <span class="compare-price">@item.GiaCu đ</span>
+
+                                                    </div>
+
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </section>
+                        <div>
+                            <tr>
+                                <td colspan="4">
+                                    <ul class="pagination justify-content-center">
+                                        @for (int i = 1; i <= ViewBag.No; i++)
+                                        {
+                                            <li class="page-item @(i == ViewBag.Page ? "active" : "")">
+                                                <a class="page-link" href="/SanPham/Index?sortOrder=@ViewBag.SortOrder&page=@i">
+                                                    @i
+                                                </a>
+                                            </li>
+                                        }
+                                    </ul>
+                                </td>
+                            </tr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

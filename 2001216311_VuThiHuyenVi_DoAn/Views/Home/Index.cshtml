@@ -1,0 +1,1522 @@
+﻿@model List<_2001216311_VuThiHuyenVi_DoAn.Models.SanPhamm>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage2TrangChu.cshtml";
+    var UserName = Context.Request.Cookies["auth"];
+    var role = Context.Request.Cookies["role"];
+}
+
+<div class="content">
+    <div class="p1">
+        <div class="container">
+            <div class="title_module_main">
+                <h2>
+                    <span>Chào mừng bạn đến với Pet Shop</span>
+                </h2>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="swiper_welcome swiper-container swiper-container-initialized swiper-container-horizontal">
+    <div class="swiper-wrapper" id="swiper-wrapper-c92e8e68e207f0fe" aria-live="polite">
+
+        <div class="swiper-slide item swiper-slide-active" style="width: 210px; margin-left:300px; margin-right: 30px;" role="group" aria-label="1 / 4">
+            <div class="box_welcome">
+                <div class="image_welcome">
+                    <a href="thuc-an-cho-cho" title="Dành cho Chó">
+                        <img class="lazyload loaded" width="10" height="10" src="http://bizweb.dktcdn.net/100/432/370/themes/894869/assets/welcome_1.png?1676276556806" data-src="http://bizweb.dktcdn.net/100/432/370/themes/894869/assets/welcome_1.png?1676276556806" alt="Dành cho Chó" data-was-processed="true">
+                    </a>
+                </div>
+                <div class="content_welcome">
+                    <h3 class="title_welcome">
+                        <a href="thuc-an-cho-cho" title="Dành cho Chó">
+                            Dành cho Chó
+                        </a>
+                    </h3>
+                    <p>
+                        Chó cưng, đồ chơi cho chó và các sản phẩm chuyên dành cho chó cưng
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-slide item swiper-slide-next" style="width: 210px; margin-right: 30px;" role="group" aria-label="2 / 4">
+            <div class="box_welcome">
+                <div class="image_welcome">
+                    <a href="thuc-an-cho-meo" title="Dành cho Mèo">
+                        <img class="lazyload loaded" width="10" height="10" src="http://bizweb.dktcdn.net/100/432/370/themes/894869/assets/welcome_2.png?1676276556806" data-src="http://bizweb.dktcdn.net/100/432/370/themes/894869/assets/welcome_2.png?1676276556806" alt="Dành cho Mèo" data-was-processed="true">
+                    </a>
+                </div>
+                <div class="content_welcome">
+                    <h3 class="title_welcome">
+                        <a href="thuc-an-cho-meo" title="Dành cho Mèo">
+                            Dành cho Mèo
+                        </a>
+                    </h3>
+                    <p>
+                        Mèo cưng, đồ chơi cho mèo và các sản phẩm chuyên dành cho mèo cưng
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-slide item" style="width: 210px; margin-right: 30px;" role="group" aria-label="3 / 4">
+            <div class="box_welcome">
+                <div class="image_welcome">
+                    <a href="thuc-an-cho-hamster" title="Dành cho Hamster">
+                        <img class="lazyload loaded" width="10" height="10" src="http://bizweb.dktcdn.net/100/432/370/themes/894869/assets/welcome_3.png?1676276556806" data-src="http://bizweb.dktcdn.net/100/432/370/themes/894869/assets/welcome_3.png?1676276556806" alt="Dành cho Hamster" data-was-processed="true">
+                    </a>
+                </div>
+                <div class="content_welcome">
+                    <h3 class="title_welcome">
+                        <a href="thuc-an-cho-hamster" title="Dành cho Hamster">
+                            Dành cho Hamster
+                        </a>
+                    </h3>
+                    <p>
+                        Hamster cưng, đồ chơi cho Hamster và các sản phẩm chuyên dành cho Hamster
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-slide item" style="width: 210px; margin-right: 30px;" role="group" aria-label="4 / 4">
+            <div class="box_welcome">
+                <div class="image_welcome">
+                    <a href="phu-kien-cho-thu-cung" title="Dành cho Chim">
+                        <img class="lazyload loaded" width="10" height="10" src="http://bizweb.dktcdn.net/100/432/370/themes/894869/assets/welcome_4.png?1676276556806" data-src="http://bizweb.dktcdn.net/100/432/370/themes/894869/assets/welcome_4.png?1676276556806" alt="Dành cho Chim" data-was-processed="true">
+                    </a>
+                </div>
+                <div class="content_welcome">
+                    <h3 class="title_welcome">
+                        <a href="phu-kien-cho-thu-cung" title="Dành cho Chim">
+                            Dành cho Chim
+                        </a>
+                    </h3>
+                    <p>
+                        Chim cưng, đồ chơi cho chim và các sản phẩm chuyên dành cho chim cưng
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1"></span></div>
+    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+</div>
+<div class="p2">
+    <div class="container">
+        <div class="tieude">
+            <h2>
+                <a href="san-pham-noi-bat" title="Sản phẩm nổi bật">Sản phẩm nổi bật</a>
+            </h2>
+        </div>
+        <div class="p2_container_down">
+            <div class="sanpham">
+                <div class="image-slider">
+                    <div class="image-item">
+                        <a style="cursor: pointer">
+                            <div class="image">
+                                <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/sua-bot-cho-meo-dr-kyan-precaten-anh.jpg?v=1626752115000"
+                                     alt="" />
+                            </div>
+                            <h3 class="image-title">Sữa bột cho mèo 110g Dr.Kyan Precaten</h3>
+                        </a>
+                        <div class="price-box">
+                            <span class="price">50.000₫</span>
+                            <span class="compare-price">100.000₫</span>
+                        </div>
+                    </div>
+                    <div class="image-item">
+                        <a style="cursor: pointer">
+                            <div class="image">
+                                <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/71.png?v=1626751368000"
+                                     alt="" />
+                            </div>
+                            <h3 class="image-title">Nước rửa khóe mắt chó mèo beaphar</h3>
+                        </a>
+                        <div class="price-box">
+                            <span class="price">190.000₫</span>
+                            <span class="compare-price">230.000₫</span>
+                        </div>
+                    </div>
+                    <div class="image-item">
+                        <a style="cursor: pointer">
+                            <div class="image">
+                                <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/66.png?v=1626751038000"
+                                     alt="" />
+                            </div>
+                            <h3 class="image-title">Canxi Phốt Pho-hỗ trợ điều trị cho thú cưng</h3>
+                        </a>
+                        <div class="price-box">
+                            <span class="price">276.000₫</span>
+                            <span class="compare-price">552.000₫</span>
+                        </div>
+                    </div>
+                    <div class="image-item">
+                        <a style="cursor: pointer">
+                            <div class="image">
+                                <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/e5a3a39b1cb341d617e54a6ae733a9e8.jpg?v=1626748714000"
+                                     alt="" />
+                            </div>
+                            <h3 class="image-title">Bát inox chống trượt cho chó mèo</h3>
+                        </a>
+                        <div class="price-box">
+                            <span class="price">35.000₫</span>
+                            <span class="compare-price">70.000₫</span>
+                        </div>
+                    </div>
+                    <div class="image-item">
+                        <a style="cursor: pointer">
+                            <div class="image">
+                                <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/bat-an-doi-khuc-xuong-4-min-050c28df86f94f10b0cb0bd446a7ce81.jpg?v=1626748007000"
+                                     alt="" />
+                            </div>
+                            <h3 class="image-title">Bát Ăn Đôi Nhựa Hình Xương</h3>
+                        </a>
+                        <div class="price-box">
+                            <span class="price">32.000₫</span>
+                            <span class="compare-price">64.000₫</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+        <a href="#" title="banner1">
+            <img src="http://bizweb.dktcdn.net/100/432/370/themes/894869/assets/banner_index.png?1676276556806" alt="banner">
+        </a>
+    </div>
+</div>
+<div class="p3">
+    <div class="container">
+        <div class="title_module_main">
+            <h2 class="h2">
+                <span>Sản phẩm shop đang bán</span>
+            </h2>
+        </div>
+        <div class="tab_menu">
+            <div class="nav_tab">
+                <ul class="tabs nav-tab tabs-title tabtitle1 ajax clearfix">
+                    <li class="tab-link tab_cate has-content current active" data-url="thuc-an-cho-meo">
+                        <a href="#menu_1">Thức ăn cho Mèo</a>
+                    </li>
+                    <li class="tab-link tab_cate has-content" data-tab="tab-2" data-url="thuc-an-cho-cho">
+                        <a href="#menu_2">Thức ăn cho Chó</a>
+                    </li>
+                    <li class="tab-link tab_cate has-content" data-tab="tab-3" data-url="thuc-an-cho-hamster">
+                        <a href="#menu_3">Thức ăn cho Hamster</a>
+                    </li>
+                    <li class="tab-link tab_cate" data-tab="tab-4" data-url="phu-kien-cho-thu-cung">
+                        <a href="#menu_4">Thức ăn cho Chim</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab_content">
+                <div class="tab_content_item" id="menu_1">
+                    <div class="p2_container_down">
+                        <div class="sanpham">
+                            <div class="image-slider1">
+
+                                <div class="image-item">
+                                    <a style="cursor: pointer">
+                                        <div class="image">
+                                            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/11.png?v=1626427911000"
+                                                 alt="" />
+
+                                        </div>
+
+                                        <h3 class="image-title">Thức ăn hạt cho mèo Whiskat</h3>
+                                    </a>
+                                    <div class="price-box">
+                                        <span class="price">120.000₫</span>
+                                        <span class="compare-price">200.000₫</span>
+                                    </div>
+                                </div>
+
+                                <div class="image-item">
+                                    <a style="cursor: pointer">
+                                        <div class="image">
+
+                                            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/7.png?v=1626427370000"
+                                                 alt="" />
+                                        </div>
+                                        <h3 class="image-title">Thức ăn dạng hạt cao cấp Smartheart</h3>
+                                    </a>
+                                    <div class="price-box">
+                                        <span class="price">190.000₫</span>
+                                        <span class="compare-price">230.000₫</span>
+                                    </div>
+                                </div>
+                                <div class="image-item">
+                                    <a class="product-thumbnail" style="cursor: pointer">
+                                        <div class="image">
+                                            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/26.png?v=1626490790000"
+                                                 alt="" />
+                                        </div>
+                                    </a>
+
+                                    <h3 class="image-title">Thức ăn hạt cho mèo Original Healthy</h3>
+                                    <div class="price-box">
+                                        <span class="price">276.000₫</span>
+                                        <span class="compare-price">552.000₫</span>
+                                    </div>
+                                </div>
+                                <div class="image-item">
+                                    <a style="cursor: pointer">
+                                        <div class="image">
+                                            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/34.png?v=1626497121000"
+                                                 alt="" />
+                                        </div>
+                                        <h3 class="image-title">Thức ăn hạt khô cho mèo MININO</h3>
+                                    </a>
+                                    <div class="price-box">
+                                        <span class="price">35.000₫</span>
+                                        <span class="compare-price">70.000₫</span>
+                                    </div>
+                                </div>
+                                <div class="image-item">
+                                    <a style="cursor: pointer">
+                                        <div class="image">
+                                            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/05583270-b388ea5bc900484dacba780e87b5346b-33ccbdf4da8945aeaab4acdc49b46ba6-master.jpg?v=1626689257000"
+                                                 alt="" />
+                                        </div>
+                                        <h3 class="image-title">Xương gặm tự nhiên vị gà Ferplast Goodbite</h3>
+                                    </a>
+                                    <div class="price-box">
+                                        <span class="price">32.000₫</span>
+                                        <span class="compare-price">64.000₫</span>
+                                    </div>
+                                </div>
+                                <div class="image-item">
+                                    <a style="cursor: pointer">
+                                        <div class="image">
+                                            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/40.png?v=1626498176000"
+                                                 alt="" />
+                                        </div>
+                                        <h3 class="image-title">Thức ăn cho mèo Royal Canin Hairball Care</h3>
+                                    </a>
+                                    <div class="price-box">
+                                        <span class="price">459.000₫</span>
+                                        <span class="compare-price">500.000₫</span>
+                                    </div>
+                                </div>
+                                <div class="image-item">
+                                    <a style="cursor: pointer">
+                                        <div class="image">
+                                            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/62.png?v=1626747381000"
+                                                 alt="" />
+                                        </div>
+                                        <h3 class="image-title">Bình trữ thức ăn tự động 1,6L</h3>
+                                    </a>
+                                    <div class="price-box">
+                                        <span class="price">110.000₫</span>
+                                        <span class="compare-price">210.000₫</span>
+                                    </div>
+                                </div>
+                                <div class="image-item">
+                                    <a style="cursor: pointer">
+                                        <div class="image">
+                                            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/5abd36eb09d04459b9d76a6cf928691b.jpg?v=1626691738000"
+                                                 alt="" />
+                                        </div>
+                                        <h3 class="image-title">Đồ chơi cho mèo PAW Happy Pet Circle 3 tầng</h3>
+                                    </a>
+                                    <div class="price-box">
+                                        <span class="price">110.000₫</span>
+                                        <span class="compare-price">210.000₫</span>
+                                    </div>
+                                </div>
+                                <div class="image-item">
+                                    <a style="cursor: pointer">
+                                        <div class="image">
+                                            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/4760-bnhtreochungvt500ml2.jpg?v=1626746921000"
+                                                 alt="" />
+                                        </div>
+                                        <h3 class="image-title">Bình treo chuồng vát Catchy 500ml</h3>
+                                    </a>
+                                    <div class="price-box">
+                                        <span class="price">110.000₫</span>
+                                        <span class="compare-price">210.000₫</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab_content_item" id="menu_2">
+                    <div class="p2_container_down">
+                        <div class="sanpham">
+                            <div class="image-slider1">
+                                <div class="image-item">
+                                    <a style="cursor: pointer">
+                                        <div class="image">
+                                            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/1.png?v=1626423932000"
+                                                 alt="" />
+                                        </div>
+                                        <h3 class="image-title">Thức ăn hạt mềm cho chó Zenith</h3>
+                                    </a>
+                                    <div class="price-box">
+                                        <span class="price">120.000₫</span>
+                                        <span class="compare-price">200.000₫</span>
+                                    </div>
+                                </div>
+                                <div class="image-item">
+                                    <a style="cursor: pointer">
+                                        <div class="image">
+                                            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/7.png?v=1626427370000"
+                                                 alt="" />
+                                        </div>
+                                        <h3 class="image-title">Thức ăn dạng hạt cao cấp Smartheart</h3>
+                                    </a>
+                                    <div class="price-box">
+                                        <span class="price">190.000₫</span>
+                                        <span class="compare-price">230.000₫</span>
+                                    </div>
+                                </div>
+                                <div class="image-item">
+                                    <a style="cursor: pointer">
+                                        <div class="image">
+                                            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/66.png?v=1626751038000"
+                                                 alt="" />
+                                        </div>
+                                        <h3 class="image-title">Canxi Phốt Pho-hỗ trợ điều trị cho thú cưng</h3>
+                                    </a>
+                                    <div class="price-box">
+                                        <span class="price">276.000₫</span>
+                                        <span class="compare-price">552.000₫</span>
+                                    </div>
+                                </div>
+                                <div class="image-item">
+                                    <a style="cursor: pointer">
+                                        <div class="image">
+                                            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/34.png?v=1626497121000"
+                                                 alt="" />
+                                        </div>
+                                        <h3 class="image-title">Thức ăn hạt khô cho mèo MININO</h3>
+                                    </a>
+                                    <div class="price-box">
+                                        <span class="price">35.000₫</span>
+                                        <span class="compare-price">70.000₫</span>
+                                    </div>
+                                </div>
+                                <div class="image-item">
+                                    <a style="cursor: pointer">
+                                        <div class="image">
+                                            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/52.png?v=1626693016000"
+                                                 alt="" />
+                                        </div>
+                                        <h3 class="image-title">Xương gặm tự nhiên vị gà Ferplast Goodbite</h3>
+                                    </a>
+                                    <div class="price-box">
+                                        <span class="price">32.000₫</span>
+                                        <span class="compare-price">64.000₫</span>
+                                    </div>
+                                </div>
+                                <div class="image-item">
+                                    <a style="cursor: pointer">
+                                        <div class="image">
+                                            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/40.png?v=1626498176000"
+                                                 alt="" />
+                                        </div>
+                                        <h3 class="image-title">Thức ăn cho mèo Royal Canin Hairball Care</h3>
+                                    </a>
+                                    <div class="price-box">
+                                        <span class="price">459.000₫</span>
+                                        <span class="compare-price">500.000₫</span>
+                                    </div>
+                                </div>
+                                <div class="image-item">
+                                    <a style="cursor: pointer">
+                                        <div class="image">
+                                            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/tb2iokzgaowbunjssppxxxpgpxa-829197117.jpg?v=1626745922000"
+                                                 alt="" />
+                                        </div>
+                                        <h3 class="image-title">Bình trữ thức ăn tự động 1,6L</h3>
+                                    </a>
+                                    <div class="price-box">
+                                        <span class="price">110.000₫</span>
+                                        <span class="compare-price">210.000₫</span>
+                                    </div>
+                                </div>
+                                <div class="image-item">
+                                    <a style="cursor: pointer">
+                                        <div class="image">
+                                            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/47.png?v=1626690187000"
+                                                 alt="" />
+                                        </div>
+                                        <h3 class="image-title">Đồ chơi cho mèo PAW Happy Pet Circle 3 tầng</h3>
+                                    </a>
+                                    <div class="price-box">
+                                        <span class="price">110.000₫</span>
+                                        <span class="compare-price">210.000₫</span>
+                                    </div>
+                                </div>
+                                <div class="image-item">
+                                    <a style="cursor: pointer">
+                                        <div class="image">
+                                            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/4760-bnhtreochungvt500ml2.jpg?v=1626746921000"
+                                                 alt="" />
+                                        </div>
+                                        <h3 class="image-title">Bình treo chuồng vát Catchy 500ml</h3>
+                                    </a>
+                                    <div class="price-box">
+                                        <span class="price">110.000₫</span>
+                                        <span class="compare-price">210.000₫</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab_content_item" id="menu_3">
+                    <div class="p2_container_down">
+                        <div class="sanpham">
+                            <div class="image-slider1">
+                                <div class="image-item">
+                                    <a style="cursor: pointer">
+                                        <div class="image">
+                                            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/sua-bot-cho-cho-dr-kyan-predogen-anh.jpg?v=1626688425000"
+                                                 alt="" />
+                                        </div>
+                                        <h3 class="image-title">Thức ăn hạt cho mèo Whiskat</h3>
+                                    </a>
+                                    <div class="price-box">
+                                        <span class="price">120.000₫</span>
+                                        <span class="compare-price">200.000₫</span>
+                                    </div>
+                                </div>
+                                <div class="image-item">
+                                    <a style="cursor: pointer">
+                                        <div class="image">
+                                            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/40.png?v=1626498176000"
+                                                 alt="" />
+                                        </div>
+                                        <h3 class="image-title">Thức ăn dạng hạt cao cấp Smartheart</h3>
+                                    </a>
+                                    <div class="price-box">
+                                        <span class="price">190.000₫</span>
+                                        <span class="compare-price">230.000₫</span>
+                                    </div>
+                                </div>
+                                <div class="image-item">
+                                    <a style="cursor: pointer">
+                                        <div class="image">
+                                            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/18.png?v=1626488836000"
+                                                 alt="" />
+                                        </div>
+                                        <h3 class="image-title">Thức ăn hạt cho mèo Original Healthy</h3>
+                                    </a>
+                                    <div class="price-box">
+                                        <span class="price">276.000₫</span>
+                                        <span class="compare-price">552.000₫</span>
+                                    </div>
+                                </div>
+                                <div class="image-item">
+                                    <a style="cursor: pointer">
+                                        <div class="image">
+                                            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/12.png?v=1626486184000"
+                                                 alt="" />
+                                        </div>
+                                        <h3 class="image-title">Thức ăn hạt khô cho mèo MININO</h3>
+                                    </a>
+                                    <div class="price-box">
+                                        <span class="price">35.000₫</span>
+                                        <span class="compare-price">70.000₫</span>
+                                    </div>
+                                </div>
+                                <div class="image-item">
+                                    <a style="cursor: pointer">
+                                        <div class="image">
+                                            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/05583270-b388ea5bc900484dacba780e87b5346b-33ccbdf4da8945aeaab4acdc49b46ba6-master.jpg?v=1626689257000"
+                                                 alt="" />
+                                        </div>
+                                        <h3 class="image-title">Xương gặm tự nhiên vị gà Ferplast Goodbite</h3>
+                                    </a>
+                                    <div class="price-box">
+                                        <span class="price">32.000₫</span>
+                                        <span class="compare-price">64.000₫</span>
+                                    </div>
+                                </div>
+                                <div class="image-item">
+                                    <a style="cursor: pointer">
+                                        <div class="image">
+                                            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/40.png?v=1626498176000"
+                                                 alt="" />
+                                        </div>
+                                        <h3 class="image-title">Thức ăn cho mèo Royal Canin Hairball Care</h3>
+                                    </a>
+                                    <div class="price-box">
+                                        <span class="price">459.000₫</span>
+                                        <span class="compare-price">500.000₫</span>
+                                    </div>
+                                </div>
+                                <div class="image-item">
+                                    <a style="cursor: pointer">
+                                        <div class="image">
+                                            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/57.png?v=1626745352000"
+                                                 alt="" />
+                                        </div>
+                                        <h3 class="image-title">Bình trữ thức ăn tự động 1,6L</h3>
+                                    </a>
+                                    <div class="price-box">
+                                        <span class="price">110.000₫</span>
+                                        <span class="compare-price">210.000₫</span>
+                                    </div>
+                                </div>
+                                <div class="image-item">
+                                    <a style="cursor: pointer">
+                                        <div class="image">
+                                            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/5abd36eb09d04459b9d76a6cf928691b.jpg?v=1626691738000"
+                                                 alt="" />
+                                        </div>
+                                        <h3 class="image-title">Đồ chơi cho mèo PAW Happy Pet Circle 3 tầng</h3>
+                                    </a>
+                                    <div class="price-box">
+                                        <span class="price">110.000₫</span>
+                                        <span class="compare-price">210.000₫</span>
+                                    </div>
+                                </div>
+                                <div class="image-item">
+                                    <a style="cursor: pointer">
+                                        <div class="image">
+                                            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/4760-bnhtreochungvt500ml2.jpg?v=1626746921000"
+                                                 alt="" />
+                                        </div>
+                                        <h3 class="image-title">Bình treo chuồng vát Catchy 500ml</h3>
+                                    </a>
+                                    <div class="price-box">
+                                        <span class="price">110.000₫</span>
+                                        <span class="compare-price">210.000₫</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab_content_item" id="menu_4">
+                    <div class="p2_container_down">
+                        <div class="sanpham">
+                            <div class="image-slider1">
+                                <div class="image-item">
+                                    <a style="cursor: pointer">
+                                        <div class="image">
+                                            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/11.png?v=1626427911000"
+                                                 alt="" />
+                                        </div>
+                                        <h3 class="image-title">Thức ăn hạt cho mèo Whiskat</h3>
+                                    </a>
+                                    <div class="price-box">
+                                        <span class="price">120.000₫</span>
+                                        <span class="compare-price">200.000₫</span>
+                                    </div>
+                                </div>
+                                <div class="image-item">
+                                    <a style="cursor: pointer">
+                                        <div class="image">
+                                            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/7.png?v=1626427370000"
+                                                 alt="" />
+                                        </div>
+                                        <h3 class="image-title">Thức ăn dạng hạt cao cấp Smartheart</h3>
+                                    </a>
+                                    <div class="price-box">
+                                        <span class="price">190.000₫</span>
+                                        <span class="compare-price">230.000₫</span>
+                                    </div>
+                                </div>
+                                <div class="image-item">
+                                    <a style="cursor: pointer">
+                                        <div class="image">
+                                            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/26.png?v=1626490790000"
+                                                 alt="" />
+                                        </div>
+                                        <h3 class="image-title">Thức ăn hạt cho mèo Original Healthy</h3>
+                                    </a>
+                                    <div class="price-box">
+                                        <span class="price">276.000₫</span>
+                                        <span class="compare-price">552.000₫</span>
+                                    </div>
+                                </div>
+                                <div class="image-item">
+                                    <a style="cursor: pointer">
+                                        <div class="image">
+                                            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/34.png?v=1626497121000"
+                                                 alt="" />
+                                        </div>
+                                        <h3 class="image-title">Thức ăn hạt khô cho mèo MININO</h3>
+                                    </a>
+                                    <div class="price-box">
+                                        <span class="price">35.000₫</span>
+                                        <span class="compare-price">70.000₫</span>
+                                    </div>
+                                </div>
+                                <div class="image-item">
+                                    <a style="cursor: pointer">
+                                        <div class="image">
+                                            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/05583270-b388ea5bc900484dacba780e87b5346b-33ccbdf4da8945aeaab4acdc49b46ba6-master.jpg?v=1626689257000"
+                                                 alt="" />
+                                        </div>
+                                        <h3 class="image-title">Xương gặm tự nhiên vị gà Ferplast Goodbite</h3>
+                                    </a>
+                                    <div class="price-box">
+                                        <span class="price">32.000₫</span>
+                                        <span class="compare-price">64.000₫</span>
+                                    </div>
+                                </div>
+                                <div class="image-item">
+                                    <a style="cursor: pointer">
+                                        <div class="image">
+                                            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/40.png?v=1626498176000"
+                                                 alt="" />
+                                        </div>
+                                        <h3 class="image-title">Thức ăn cho mèo Royal Canin Hairball Care</h3>
+                                    </a>
+                                    <div class="price-box">
+                                        <span class="price">459.000₫</span>
+                                        <span class="compare-price">500.000₫</span>
+                                    </div>
+                                </div>
+                                <div class="image-item">
+                                    <a style="cursor: pointer">
+                                        <div class="image">
+                                            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/62.png?v=1626747381000"
+                                                 alt="" />
+                                        </div>
+                                        <h3 class="image-title">Bình trữ thức ăn tự động 1,6L</h3>
+                                    </a>
+                                    <div class="price-box">
+                                        <span class="price">110.000₫</span>
+                                        <span class="compare-price">210.000₫</span>
+                                    </div>
+                                </div>
+                                <div class="image-item">
+                                    <a style="cursor: pointer">
+                                        <div class="image">
+                                            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/5abd36eb09d04459b9d76a6cf928691b.jpg?v=1626691738000"
+                                                 alt="" />
+                                        </div>
+                                        <h3 class="image-title">Đồ chơi cho mèo PAW Happy Pet Circle 3 tầng</h3>
+                                    </a>
+                                    <div class="price-box">
+                                        <span class="price">110.000₫</span>
+                                        <span class="compare-price">210.000₫</span>
+                                    </div>
+                                </div>
+                                <div class="image-item">
+                                    <a style="cursor: pointer">
+                                        <div class="image">
+                                            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/4760-bnhtreochungvt500ml2.jpg?v=1626746921000"
+                                                 alt="" />
+                                        </div>
+                                        <h3 class="image-title">Bình treo chuồng vát Catchy 500ml</h3>
+                                    </a>
+                                    <div class="price-box">
+                                        <span class="price">110.000₫</span>
+                                        <span class="compare-price">210.000₫</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="p4">
+    <div class="container2">
+        <div class="title_module_main">
+            <h2>
+                <p>Dịch vụ<br><img src="https://bizweb.dktcdn.net/100/432/370/themes/894869/assets/bg-title.png?1665454509075" alt="anh"></p>
+            </h2>
+        </div>
+        <div class="row">
+            <div class="cot1">
+                <div class="background">
+                    <h3 style="text-align: center; color: #4e3621">CHĂM SÓC THÚ CƯNG</h3>
+                    <ul>
+                        <li><img src="https://bizweb.dktcdn.net/100/432/370/themes/894869/assets/bg_list_sv.png?1665454509075" alt="chan" style="margin-left: -50px; padding: 0px 25px 0 0; height: 25px">Giúp thú cưng sạch sẽ hơn, gọn gàng hơn</li>
+                        <li><img src="https://bizweb.dktcdn.net/100/432/370/themes/894869/assets/bg_list_sv.png?1665454509075" alt="chan" style="margin-left: -50px; padding: 0px 25px 0 0; height: 25px">Tạo những kiểu tóc sang chảnh, ấn tượng</li>
+                        <li><img src="https://bizweb.dktcdn.net/100/432/370/themes/894869/assets/bg_list_sv.png?1665454509075" alt="chan" style="margin-left: -50px; padding: 0px 25px 0 0; height: 25px">Loại bỏ các mầm mống gây bệnh từ lông móng</li>
+                        <li><img src="https://bizweb.dktcdn.net/100/432/370/themes/894869/assets/bg_list_sv.png?1665454509075" alt="chan" style="margin-left: -50px; padding: 0px 25px 0 0; height: 25px">Thú cưng được massage đúng cách, tạo tâm lý vui vẻ, thoải mái</li>
+                        <li><img src="https://bizweb.dktcdn.net/100/432/370/themes/894869/assets/bg_list_sv.png?1665454509075" alt="chan" style="margin-left: -50px; padding: 0px 25px 0 0; height: 25px">Đảm bảo an toàn cho boss</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cot1">
+                <div class="background1">
+                </div>
+            </div>
+            <div class="cot1">
+                <div class="background2">
+                    <h3 style="text-align: center; color: aliceblue">KIỂM TRA THÚ CƯNG</h3>
+                    <ul>
+                        <li><img src="https://bizweb.dktcdn.net/100/432/370/themes/894869/assets/bg_list_sv_2.png?1665454509075" alt="chan" style="margin-left: -50px; padding: 0px 25px 0 0; height: 25px">Ngăn ngừa và sớm phát hiện các bệnh nguy hiểm</li>
+                        <li><img src="https://bizweb.dktcdn.net/100/432/370/themes/894869/assets/bg_list_sv_2.png?1665454509075" alt="chan" style="margin-left: -50px; padding: 0px 25px 0 0; height: 25px">Kiểm soát được tình trạng mất cân bằng dinh dưỡng</li>
+                        <li><img src="https://bizweb.dktcdn.net/100/432/370/themes/894869/assets/bg_list_sv_2.png?1665454509075" alt="chan" style="margin-left: -50px; padding: 0px 25px 0 0; height: 25px">Phát hiện bệnh từ những dấu hiệu ban đầu và điều trị dứt điểm</li>
+                        <li><img src="https://bizweb.dktcdn.net/100/432/370/themes/894869/assets/bg_list_sv_2.png?1665454509075" alt="chan" style="margin-left: -50px; padding: 0px 25px 0 0; height: 25px">Tiết kiệm chi phí và thời gian điều trị cho thú cưng</li>
+                        <li><img src="https://bizweb.dktcdn.net/100/432/370/themes/894869/assets/bg_list_sv_2.png?1665454509075" alt="chan" style="margin-left: -50px; padding: 0px 25px 0 0; height: 25px">Phòng ngừa các bệnh lây từ thú sang người</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="p5">
+    <div class="noidung">
+        <div class="container2">
+            <div class="title_module_main">
+                <h2 class="h2">
+                    <a href="phu-kien-cho-thu-cung" title="Phụ kiện cho thú cưng">Phụ kiện cho thú cưng</a>
+                </h2>
+            </div>
+            <div class="noidung_phukien">
+                <div class="noidung_phukien1">
+                    <div class="sanpham1" style="width: 290px; margin-right: 30px">
+                        <div class="noidung_sanpham1">
+
+                            <div class="mota">
+                                <div class="anh1">
+                                    <img src="https://bizweb.dktcdn.net/thumb/medium/100/432/370/products/sua-bot-cho-meo-dr-kyan-precaten-anh.jpg?v=1626752115000" alt="anh1">
+                                </div>
+                                <h3>Sữa bột cho mèo 110g Dr.Kyan Precaten</h3>
+                                <div class="price-box">
+                                    <span>50.000₫</span>
+                                    <span class="compare-price">100.000₫</span>
+                                </div>
+                                <div class="magnifying-glass" onclick="hienThiThongTinSanPham1()">
+                                    <img class="icon1" src="pngegg.png" width="23" alt="2" style="margin-left: 4px; margin-top: 1px">
+                                </div>
+                                <div style="max-height: 100%; max-width: 100px; margin-left: 130px; margin-top: -32px">
+                                    <button class="buy-now-button" onclick="themvaogiohang(this)">Mua ngay</button>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="sanpham1" style="width: 290px; margin-right: 30px">
+                        <div class="noidung_sanpham1">
+
+                            <div class="mota">
+                                <div class="anh1">
+                                    <img src="https://bizweb.dktcdn.net/thumb/medium/100/432/370/products/tb2iokzgaowbunjssppxxxpgpxa-829197117.jpg?v=1626745922150" alt="anh1">
+                                </div><h3>Balo vận chuyển chó mèo Phi hành</h3>
+                                <div class="price-box">
+                                    <span>79.000₫</span>
+                                    <span class="compare-price">500.000₫</span>
+                                </div>
+                                <div class="magnifying-glass" onclick="hienThiThongTinSanPham()">
+                                    <img class="icon1" src="pngegg.png" width="23" alt="2" style="margin-left: 4px; margin-top: 1px">
+                                </div>
+                                <div style="max-height: 100%; max-width: 100px; margin-left: 130px; margin-top: -32px">
+                                    <button class="buy-now-button" onclick="themvaogiohang(this)">Mua ngay</button>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="sanpham1" style="width: 290px; margin-right: 30px">
+                        <div class="noidung_sanpham1">
+
+                            <div class="mota">
+                                <div class="anh1">
+                                    <img src="https://bizweb.dktcdn.net/thumb/medium/100/432/370/products/66.png?v=1626751038247" alt="anh1">
+                                </div>
+                                <h3>Canxi Phốt Pho-hỗ trợ điều trị cho thú cưng</h3>
+                                <div class="price-box">
+                                    <span>69.000₫</span>
+                                    <span class="compare-price">170.000₫</span>
+                                </div>
+                                <div class="magnifying-glass" onclick="hienThiThongTinSanPham2()">
+                                    <img class="icon1" src="pngegg.png" width="23" alt="2" style="margin-left: 4px; margin-top: 1px">
+                                </div>
+                                <div style="max-height: 100%; max-width: 100px; margin-left: 130px; margin-top: -32px">
+                                    <button class="buy-now-button" onclick="themvaogiohang(this)">Mua ngay</button>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="sanpham1" style="width: 290px; margin-right: 30px">
+                        <div class="noidung_sanpham1">
+
+                            <div class="mota">
+                                <div class="anh1">
+                                    <img src="https://bizweb.dktcdn.net/thumb/medium/100/432/370/products/sua-bot-cho-cho-dr-kyan-predogen-anh.jpg?v=1626688425177" alt="anh1">
+                                </div>
+                                <h3>Sữa bột cho chó Dr.Kyan Predogen</h3>
+                                <div class="price-box">
+                                    <span>79.000₫</span>
+                                    <span class="compare-price">100.000₫</span>
+                                </div>
+                                <div class="magnifying-glass" onclick="hienThiThongTinSanPham3()">
+                                    <img class="icon1" src="pngegg.png" width="23" alt="2" style="margin-left: 4px; margin-top: 1px">
+                                </div>
+                                <div style="max-height: 100%; max-width: 100px; margin-left: 130px; margin-top: -32px">
+                                    <button class="buy-now-button" onclick="themvaogiohang(this)">Mua ngay</button>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="sanpham1" style="width: 290px; margin-right: 30px">
+                        <div class="noidung_sanpham1">
+
+                            <div class="mota">
+                                <div class="anh1">
+                                    <img src="https://bizweb.dktcdn.net/thumb/medium/100/432/370/products/52.png?v=1626693016593" alt="anh1">
+                                </div>
+                                <h3>Sữa tắm cho chó lông trắng SPIRIT White Dog</h3>
+                                <div class="price-box">
+                                    <span>89.000₫</span>
+                                    <span class="compare-price">100.000₫</span>
+                                </div>
+                                <div class="magnifying-glass" onclick="hienThiThongTinSanPham4()">
+                                    <img class="icon1" src="pngegg.png" width="23" alt="2" style="margin-left: 4px; margin-top: 1px">
+                                </div>
+                                <div style="max-height: 100%; max-width: 100px; margin-left: 130px; margin-top: -32px">
+                                    <button class="buy-now-button" onclick="themvaogiohang(this)">Mua ngay</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sanpham1" style="width: 290px; margin-right: 30px">
+                        <div class="noidung_sanpham1">
+                            <div class="mota">
+                                <div class="anh1">
+                                    <img src="https://bizweb.dktcdn.net/thumb/medium/100/432/370/products/71.png?v=1626751368607" alt="anh1">
+                                </div>
+                                <h3>Nước rửa khóe mắt chó mèo beaphar</h3>
+                                <div class="price-box">
+                                    <span>99.000₫</span>
+                                    <span class="compare-price">150.000₫</span>
+                                </div>
+                                <div class="magnifying-glass" onclick="hienThiThongTinSanPham5()">
+                                    <img class="icon1" src="pngegg.png" width="23" alt="2" style="margin-left: 4px; margin-top: 1px">
+                                </div>
+                                <div style="max-height: 100%; max-width: 100px; margin-left: 130px; margin-top: -32px">
+                                    <button class="buy-now-button" onclick="themvaogiohang(this)">Mua ngay</button>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <script>
+                        var cartItems = []; // Mảng để lưu trữ các mục trong giỏ hàng
+
+                        function themvaogiohang(button) {
+                            var product = button.parentNode.parentNode;
+                            var image = product.querySelector('img').src;
+                            var name = product.querySelector('h3').innerText;
+                            var price = product.querySelector('.price-box span').innerText;
+
+                            var cartItems = document.getElementById('cart-items');
+                            var cartItemElements = cartItems.getElementsByClassName("cart-item");
+
+                            // Kiểm tra xem sản phẩm đã tồn tại trong giỏ hàng chưa
+                            for (var i = 0; i < cartItemElements.length; i++) {
+                                var cartItem = cartItemElements[i];
+                                var itemName = cartItem.querySelector(".cart-item-name").innerText;
+
+                                if (itemName === name) {
+                                    var quantityInput = cartItem.querySelector(".cart-item-quantity");
+                                    var quantity = parseInt(quantityInput.value);
+                                    quantity += 1;
+                                    quantityInput.value = quantity;
+
+                                    capNhatThongTinGioHang();
+
+                                    return; // Kết thúc hàm nếu sản phẩm đã tồn tại trong giỏ hàng
+
+                                }
+                            }
+                            var newItem = document.createElement('li');
+                            newItem.classList.add('cart-item');
+                            newItem.innerHTML = `
+                                                          <img class="img_SP" src="${image}" alt="product-image">
+                                                          <div class="cart-item-info">
+                                                            <span class="cart-item-name">${name}</span>
+                                                            <span class="cart-item-price">${price}</span>
+                                                            <input type="number" class="cart-item-quantity" value="1" min="1" onchange="capNhatThongTinGioHang()">
+                                                            <img class="delete-icon" src="https://bizweb.dktcdn.net/100/432/370/themes/894869/assets/icon-remove.png?1665454509075" alt="delete-icon" onclick="xoaSanPham(this)">
+                                                          </div>
+                                                        `;
+                            cartItems.appendChild(newItem);
+
+                            capNhatThongTinGioHang();
+                            scrollToTop();
+                            hienThiGioHang();
+                        }
+                        function scrollToTop() {
+                            var currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+
+                            if (currentPosition > 0) {
+                                window.requestAnimationFrame(scrollToTop);
+                                window.scrollTo(0, currentPosition - currentPosition / 30);
+                            }
+                        }
+
+                        function xoaSanPham(deleteIcon) {
+                            var item = deleteIcon.parentNode.parentNode;
+                            item.remove();
+
+                            capNhatThongTinGioHang();
+                        }
+
+                        // New function to show/hide the cart items and info containers
+                        function hienThiGioHang() {
+                            var cartItemsContainer = document.getElementById('cart-items-container');
+                            var cartInfoContainer = document.getElementById('cart-info');
+
+                            if (cartItemsContainer.style.display === 'none') {
+                                cartItemsContainer.style.display = 'block';
+                                cartInfoContainer.style.display = 'block';
+                            } else {
+                                cartItemsContainer.style.display = 'none';
+                                cartInfoContainer.style.display = 'none';
+                            }
+                        }
+
+                        // New function to update the cart info
+                        function capNhatThongTinGioHang() {
+                            var cartItems = document.querySelectorAll('.cart-item');
+                            var cartTotal = cartItems.length;
+                            var cartSubtotal = 0;
+                            var cartItemsCount = 0;
+                            cartItems.forEach(function (item) {
+                                var price = item.querySelector('.cart-item-price').innerText;
+                                var quantity = item.querySelector('.cart-item-quantity').value;
+                                cartSubtotal += parseInt(price) * quantity;
+                                cartItemsCount += parseInt(quantity);
+                            });
+                            var cartTotalElement = document.getElementById('cart-total');
+                            var cartSubtotalElement = document.getElementById('cart-subtotal');
+                            var cartItemsCountElement = document.querySelector('#cart-icon .cart-items-count');
+                            cartTotalElement.innerText = cartItemsCount;
+                            cartSubtotalElement.innerText = cartSubtotal + '.000₫';
+                            cartItemsCountElement.innerText = cartItemsCount;
+                        }
+
+
+                        function dongThongTinGioHang() {
+                            var cartItemsContainer = document.getElementById('cart-items-container');
+                            var cartInfoContainer = document.getElementById('cart-info');
+
+                            cartItemsContainer.style.display = 'none';
+                            cartInfoContainer.style.display = 'none';
+                        }
+                    </script>
+                    <script>
+                        function hienThiThongTinSanPham() {
+                            var popup = document.getElementById("popup");
+                            var overlay = document.getElementById("popup-overlay");
+                            popup.style.display = "block";
+                            overlay.style.display = "block";
+                            document.body.classList.add("popup-open");
+                        }
+                        function dongPopup() {
+                            var popup = document.getElementById("popup");
+                            var overlay = document.getElementById("popup-overlay");
+                            popup.style.display = "none";
+                            overlay.style.display = "none";
+                            document.body.classList.remove("popup-open");
+                        }
+                    </script>
+                    <script>
+                        function hienThiThongTinSanPham1() {
+                            var popup = document.getElementById("popup1");
+                            var overlay = document.getElementById("popup-overlay");
+                            popup.style.display = "block";
+                            overlay.style.display = "block";
+                            document.body.classList.add("popup-open");
+                        }
+                        function dongPopup1() {
+                            var popup = document.getElementById("popup1");
+                            var overlay = document.getElementById("popup-overlay");
+                            popup.style.display = "none";
+                            overlay.style.display = "none";
+                            document.body.classList.remove("popup-open");
+                        }
+                    </script>
+                    <script>
+                        function hienThiThongTinSanPham2() {
+                            var popup = document.getElementById("popup2");
+                            var overlay = document.getElementById("popup-overlay");
+                            popup.style.display = "block";
+                            overlay.style.display = "block";
+                            document.body.classList.add("popup-open");
+                        }
+                        function dongPopup2() {
+                            var popup = document.getElementById("popup2");
+                            var overlay = document.getElementById("popup-overlay");
+                            popup.style.display = "none";
+                            overlay.style.display = "none";
+                            document.body.classList.remove("popup-open");
+                        }
+                    </script>
+                    <script>
+                        function hienThiThongTinSanPham3() {
+                            var popup = document.getElementById("popup3");
+                            var overlay = document.getElementById("popup-overlay");
+                            popup.style.display = "block";
+                            overlay.style.display = "block";
+                            document.body.classList.add("popup-open");
+                        }
+                        function dongPopup3() {
+                            var popup = document.getElementById("popup3");
+                            var overlay = document.getElementById("popup-overlay");
+                            popup.style.display = "none";
+                            overlay.style.display = "none";
+                            document.body.classList.remove("popup-open");
+                        }
+                    </script>
+                    <script>
+                        function hienThiThongTinSanPham4() {
+                            var popup = document.getElementById("popup4");
+                            var overlay = document.getElementById("popup-overlay");
+                            popup.style.display = "block";
+                            overlay.style.display = "block";
+                            document.body.classList.add("popup-open");
+                        }
+                        function dongPopup4() {
+                            var popup = document.getElementById("popup4");
+                            var overlay = document.getElementById("popup-overlay");
+                            popup.style.display = "none";
+                            overlay.style.display = "none";
+                            document.body.classList.remove("popup-open");
+                        }
+                    </script>
+                    <script>
+                        function hienThiThongTinSanPham5() {
+                            var popup = document.getElementById("popup5");
+                            var overlay = document.getElementById("popup-overlay");
+                            popup.style.display = "block";
+                            overlay.style.display = "block";
+                            document.body.classList.add("popup-open");
+                        }
+                        function dongPopup5() {
+                            var popup = document.getElementById("popup5");
+                            var overlay = document.getElementById("popup-overlay");
+                            popup.style.display = "none";
+                            overlay.style.display = "none";
+                            document.body.classList.remove("popup-open");
+                        }
+                    </script>
+                </div>
+                <div class="btn-readmore">
+                    <a href="SP.html" title="Xem thêm sản phẩm">
+                        Xem thêm sản phẩm
+                    </a>
+                    <div style="margin-left: 190px; margin-top: -31px">
+                        <img src="kisspng-arrow-computer-icons-symbol-arrow-light-5b118ef54ba3c5.3364116415278773653098.png" width="20px" style="margin-top: 10px; margin-left: 10px;" alt="muiten">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="p6">
+    <div class="container">
+        <div class="title_module_main">
+            <h2 class="h2">
+                <a href="tin-tuc" title="Tin thú cưng">Tin thú cưng</a>
+            </h2>
+        </div>
+        <div class="row">
+            <div class="row1">
+                <a class="row1_anh">
+                    <img src="https://bizweb.dktcdn.net/100/432/370/articles/wallpaperflare-com-wallpaper-15.jpg?v=1626767478920" alt="">
+                </a>
+                <div class="row1_noidung">
+                    <a href="" title="Cách ít người biết để dạy mèo đi vệ sinh đúng chỗ" class="a-title">Cách ít người biết để dạy mèo đi vệ sinh đúng chỗ</a>
+                    <div class="summary_blog">
+                        <p>
+                            Với không ít người nuôi mèo, việc dạy cho mèo cách đi vệ sinh đúng chỗ là một chuyện không hề dễ, và nếu không chú ý tới vấn đề này ngay từ khi mèo còn nhỏ chúng ta sẽ phải xử lí hậu họa do mèo gây tra, rất vất vả.
+                        </p>
+                    </div>
+                    <div class="blog_bottom" style="margin-top: 40px">
+                        <span class="post-time">
+                            <svg aria-hidden="true" width="16" height="16" focusable="false" data-prefix="fas" data-icon="clock" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-clock fa-w-16"><path fill="currentColor" d="M256,8C119,8,8,119,8,256S119,504,256,504,504,393,504,256,393,8,256,8Zm92.49,313h0l-20,25a16,16,0,0,1-22.49,2.5h0l-67-49.72a40,40,0,0,1-15-31.23V112a16,16,0,0,1,16-16h32a16,16,0,0,1,16,16V256l58,42.5A16,16,0,0,1,348.49,321Z" class=""></path></svg>
+                            20/07/2021   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+                        </span>
+                        <a class="readmore" href="/cach-it-nguoi-biet-de-day-meo-di-ve-sinh-dung-cho" title="Xem tiếp">
+                            &nbsp;&nbsp;&nbsp;Xem tiếp
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row1">
+                <a class="row2_anh">
+                    <img src="https://www.growgreen.edu.vn/uploads/1904/co-nen-cho-tre-choi-voi-cho-nuoi.jpg" alt="" height="">
+                </a>
+                <div class="row1_noidung">
+                    <a href="" title="Cách ít người biết để dạy mèo đi vệ sinh đúng chỗ" class="a-title">Tình yêu giống như một con chó, mình đuổi thì nó chạy mình chạy thì nó lại đuổi</a>
+                    <div class="summary_blog">
+                        <p>
+                            Với không ít người nuôi mèo, việc dạy cho mèo cách đi vệ sinh đúng chỗ là một chuyện không hề dễ, và nếu không chú ý tới vấn đề này ngay từ khi mèo còn nhỏ chúng ta sẽ phải xử lí hậu họa do mèo gây tra, rất vất vả.
+                        </p>
+                    </div>
+                    <div class="blog_bottom">
+                        <span class="post-time">
+                            <svg aria-hidden="true" width="16" height="16" focusable="false" data-prefix="fas" data-icon="clock" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-clock fa-w-16"><path fill="currentColor" d="M256,8C119,8,8,119,8,256S119,504,256,504,504,393,504,256,393,8,256,8Zm92.49,313h0l-20,25a16,16,0,0,1-22.49,2.5h0l-67-49.72a40,40,0,0,1-15-31.23V112a16,16,0,0,1,16-16h32a16,16,0,0,1,16,16V256l58,42.5A16,16,0,0,1,348.49,321Z" class=""></path></svg>
+                            20/07/2021   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+                        </span>
+                        <a class="readmore" href="/cach-it-nguoi-biet-de-day-meo-di-ve-sinh-dung-cho" title="Xem tiếp">
+                            &nbsp;&nbsp;&nbsp;Xem tiếp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $('.image-slider').slick({
+        dots: true,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        prevArrow: `<button type='button' class='slick-prev slick-arrow'><ion-icon name="arrow-back-outline"></ion-icon></button>`,
+        nextArrow: `<button type='button' class='slick-next slick-arrow'><ion-icon name="arrow-forward-outline"></ion-icon></button>`,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+</script>
+<script>
+    $('.image-slider1').slick({
+        rows: 2,
+        dots: true,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        prevArrow: `<button type='button' class='slick-prev slick-arrow'><ion-icon name="arrow-back-outline"></ion-icon></button>`,
+        nextArrow: `<button type='button' class='slick-next slick-arrow'><ion-icon name="arrow-forward-outline"></ion-icon></button>`,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+</script>
+<!--	<script>
+        const $ = document.querySelector.bind(document);
+        const $$ = document.querySelectorAll.bind(document);
+
+        const tabs = $$('.tab-link');
+        const panes = $$('.tab_1');
+
+        const tabActive = $('.tab-link.active');
+        const line = $(".tabs .line");
+
+        // SonDN fixed - Active size wrong size on first load.
+        // Original post: https://www.facebook.com/groups/649972919142215/?multi_permalinks=1175881616551340
+        requestIdleCallback(function () {
+          line.style.left = tabActive.offsetLeft + "px";
+          line.style.width = tabActive.offsetWidth + "px";
+        });
+
+        tabs.forEach((tab, index) => {
+          const pane = panes[index];
+
+          tab.onclick = function () {
+            $('.tab-link.active').classList.remove('active');
+            $('.tab_1.active').classList.remove('active');
+
+            line.style.left = this.offsetLeft + "px";
+            line.style.width = this.offsetWidth + "px";
+
+            this.classList.add('active');
+            pane.classList.add('active');
+          };
+        });
+
+    </script> -->
+<script>
+    $(document).ready(function () {
+        $('.tab_content_item').hide();
+        $('.tab_content_item:first-child').fadeIn();
+        $('.nav-tab li').click(function () {
+            $('.nav-tab li').removeClass('active');
+            $(this).addClass('active');
+
+            let id_tab_content = $(this).children('a').attr('href');
+
+            $('.tab_content_item').hide();
+            $(id_tab_content).fadeIn();
+            return false;
+        });
+    });
+</script>
+<script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+<div id="popup-overlay" class="popup-overlay"></div>
+<div id="popup" class="popup">
+    <span class="close-button" onclick="dongPopup()">&#10006;</span>
+    <div class="product" style="border: 1px solid #E0E0E0;">
+        <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/tb2iokzgaowbunjssppxxxpgpxa-829197117.jpg" alt="1" class="mainpicture">
+        <div class="colors" style="margin-left: 50px">
+            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/tb2iokzgaowbunjssppxxxpgpxa-829197117.jpg" alt="" style="cursor: pointer">
+            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/a83efcdaddd868c24f324c112e04cd7f.jpg" alt="" style="cursor: pointer">
+            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/balo-phi-hanh-gia-cho-cho-meo-loffe-trong-suot.jpg" alt="" style="cursor: pointer">
+            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/balo-phi-hanh-gia-cho-meo.jpg" alt="" style="cursor: pointer">
+        </div>
+    </div>
+    <div class="thongtin_khung" style="margin-left: 460px; margin-top: -510px; font-size: 20px">
+        <h3>Balo vận chuyển chó mèo Phi hành</h3>
+        <div class="price-box" style="font-size: 30px; margin-left: -90px">
+            400.000₫
+            <span class="compare-price">500.000₫</span>
+        </div>
+        <br>
+        <hr class="dotted">
+        <span>Thông tin sản phẩm đang cập nhật</span>
+        <button onclick="themvaogiohang(this)" type="submit" class="btn_cool btn btn_base fix_add_to_cart ajax_addtocart btn_add_cart btn-cart add_to_cart add_to_cart_detail">
+            <span class="btn-content text_1">Thêm vào sản phẩm</span>
+        </button>
+    </div>
+    <script>
+        var colorsList = document.querySelectorAll(".product>.colors>img");
+        for (var i = 0; i < colorsList.length; i++) {
+            colorsList[i].onmouseover = function () {
+                var mainImg = document.querySelector(".product>.mainpicture");
+                mainImg.src = this.src;
+            }
+        }
+    </script>
+</div>
+
+
+
+
+<div id="popup1" class="popup">
+    <span class="close-button" onclick="dongPopup1()">&#10006;</span>
+    <div class="product1" style="border: 1px solid #E0E0E0;">
+        <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/sua-bot-cho-meo-dr-kyan-precaten-anh.jpg" alt="1" class="mainpicture1">
+        <div class="colors1" style="margin-left: 50px">
+            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/sua-bot-cho-meo-dr-kyan-precaten-anh.jpg" alt="" style="cursor: pointer">
+            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/73.png" alt="" style="cursor: pointer">
+            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/74.png" alt="" style="cursor: pointer">
+            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/599f03c79ab8459f964e9a35140f2de0.jpg" alt="" style="cursor: pointer">
+        </div>
+    </div>
+    <div class="thongtin_khung" style="margin-left: 460px; margin-top: -510px; font-size: 20px">
+        <h3>Sữa bột cho mèo 110g Dr.Kyan Precaten</h3>
+        <div class="price-box" style="font-size: 30px; margin-left: -90px">
+            350.000₫
+            <span class="compare-price">400.000₫</span>
+        </div>
+        <br>
+        <hr class="dotted">
+        <span>Thông tin sản phẩm đang cập nhật</span>
+        <button onclick="themvaogiohang(this)" type="submit" class="btn_cool btn btn_base fix_add_to_cart ajax_addtocart btn_add_cart btn-cart add_to_cart add_to_cart_detail">
+            <span class="btn-content text_1">Thêm vào sản phẩm</span>
+        </button>
+    </div>
+    <script>
+        var colorsList = document.querySelectorAll(".product1>.colors1>img");
+        for (var i = 0; i < colorsList.length; i++) {
+            colorsList[i].onmouseover = function () {
+                var mainImg = document.querySelector(".product1>.mainpicture1");
+                mainImg.src = this.src;
+            }
+        }
+    </script>
+</div>
+
+
+
+<div id="popup2" class="popup">
+    <span class="close-button" onclick="dongPopup2()">&#10006;</span>
+    <div class="product2" style="border: 1px solid #E0E0E0;">
+        <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/66.png" alt="1" class="mainpicture2">
+        <div class="colors2" style="margin-left: 50px">
+            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/66.png" alt="" style="cursor: pointer">
+            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/67.png" alt="" style="cursor: pointer">
+            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/68.png" alt="" style="cursor: pointer">
+            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/69.png" alt="" style="cursor: pointer">
+        </div>
+    </div>
+    <div class="thongtin_khung" style="margin-left: 460px; margin-top: -510px; font-size: 20px">
+        <h3>Canxi Phốt Pho-hỗ trợ điều trị cho thú cưng</h3>
+        <div class="price-box" style="font-size: 30px; margin-left: -90px">
+            150.000₫
+            <span class="compare-price">230.000₫</span>
+        </div>
+        <br>
+        <hr class="dotted">
+        <span>Thông tin sản phẩm đang cập nhật</span>
+        <button onclick="themvaogiohang(this)" type="submit" class="btn_cool btn btn_base fix_add_to_cart ajax_addtocart btn_add_cart btn-cart add_to_cart add_to_cart_detail">
+            <span class="btn-content text_1">Thêm vào sản phẩm</span>
+        </button>
+    </div>
+    <script>
+        var colorsList = document.querySelectorAll(".product2>.colors2>img");
+        for (var i = 0; i < colorsList.length; i++) {
+            colorsList[i].onmouseover = function () {
+                var mainImg = document.querySelector(".product2>.mainpicture2");
+                mainImg.src = this.src;
+            }
+        }
+    </script>
+</div>
+
+
+<div id="popup3" class="popup">
+    <span class="close-button" onclick="dongPopup3()">&#10006;</span>
+    <div class="product3" style="border: 1px solid #E0E0E0;">
+        <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/sua-bot-cho-cho-dr-kyan-predogen-anh.jpg" alt="1" class="mainpicture3">
+        <div class="colors3" style="margin-left: 50px">
+            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/sua-bot-cho-cho-dr-kyan-predogen-anh.jpg" alt="" style="cursor: pointer">
+            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/41.png" alt="" style="cursor: pointer">
+            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/42.png" alt="" style="cursor: pointer">
+            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/43.png" alt="" style="cursor: pointer">
+        </div>
+    </div>
+    <div class="thongtin_khung" style="margin-left: 460px; margin-top: -510px; font-size: 20px">
+        <h3>Sữa bột cho chó Dr.Kyan Predogen</h3>
+        <div class="price-box" style="font-size: 30px; margin-left: -90px">
+            100.000₫
+            <span class="compare-price">150.000₫</span>
+        </div>
+        <br>
+        <hr class="dotted">
+        <span>Thông tin sản phẩm đang cập nhật</span>
+        <button onclick="themvaogiohang(this)" type="submit" class="btn_cool btn btn_base fix_add_to_cart ajax_addtocart btn_add_cart btn-cart add_to_cart add_to_cart_detail">
+            <span class="btn-content text_1">Thêm vào sản phẩm</span>
+        </button>
+    </div>
+    <script>
+        var colorsList = document.querySelectorAll(".product3>.colors3>img");
+        for (var i = 0; i < colorsList.length; i++) {
+            colorsList[i].onmouseover = function () {
+                var mainImg = document.querySelector(".product3>.mainpicture3");
+                mainImg.src = this.src;
+            }
+        }
+    </script>
+</div>
+
+
+<div id="popup4" class="popup">
+    <span class="close-button" onclick="dongPopup4()">&#10006;</span>
+    <div class="product4" style="border: 1px solid #E0E0E0;">
+        <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/52.png" alt="1" class="mainpicture4">
+        <div class="colors4" style="margin-left: 50px">
+            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/52.png" alt="" style="cursor: pointer">
+            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/51.png" alt="" style="cursor: pointer">
+            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/53.png" alt="" style="cursor: pointer">
+            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/54.png" alt="" style="cursor: pointer">
+        </div>
+    </div>
+    <div class="thongtin_khung" style="margin-left: 460px; margin-top: -510px; font-size: 20px">
+        <h3>Sữa bột cho chó Dr.Kyan Predogen</h3>
+        <div class="price-box" style="font-size: 30px; margin-left: -90px">
+            100.000₫
+            <span class="compare-price">150.000₫</span>
+        </div>
+        <br>
+        <hr class="dotted">
+        <span>Thông tin sản phẩm đang cập nhật</span>
+        <button onclick="themvaogiohang(this)" type="submit" class="btn_cool btn btn_base fix_add_to_cart ajax_addtocart btn_add_cart btn-cart add_to_cart add_to_cart_detail">
+            <span class="btn-content text_1">Thêm vào sản phẩm</span>
+        </button>
+    </div>
+    <script>
+        var colorsList = document.querySelectorAll(".product4>.colors4>img");
+        for (var i = 0; i < colorsList.length; i++) {
+            colorsList[i].onmouseover = function () {
+                var mainImg = document.querySelector(".product4>.mainpicture4");
+                mainImg.src = this.src;
+            }
+        }
+    </script>
+</div>
+
+
+<div id="popup5" class="popup">
+    <span class="close-button" onclick="dongPopup5()">&#10006;</span>
+    <div class="product5" style="border: 1px solid #E0E0E0;">
+        <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/71.png" alt="1" class="mainpicture5">
+        <div class="colors5" style="margin-left: 50px">
+            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/71.png" alt="" style="cursor: pointer">
+            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/70.png" alt="" style="cursor: pointer">
+            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/72.png" alt="" style="cursor: pointer">
+            <img src="https://bizweb.dktcdn.net/thumb/large/100/432/370/products/a6de396311e95ecb59ff4fc9919dd8fc.jpg" alt="" style="cursor: pointer">
+        </div>
+    </div>
+    <div class="thongtin_khung" style="margin-left: 460px; margin-top: -510px; font-size: 20px">
+        <h3>Sữa bột cho chó Dr.Kyan Predogen</h3>
+        <div class="price-box" style="font-size: 30px; margin-left: -90px">
+            100.000₫
+            <span class="compare-price">150.000₫</span>
+        </div>
+        <br>
+        <hr class="dotted">
+        <span>Thông tin sản phẩm đang cập nhật</span>
+        <button onclick="themvaogiohang(this)" type="submit" class="btn_cool btn btn_base fix_add_to_cart ajax_addtocart btn_add_cart btn-cart add_to_cart add_to_cart_detail">
+            <span class="btn-content text_1">Thêm vào sản phẩm</span>
+        </button>
+    </div>
+    <script>
+        var colorsList = document.querySelectorAll(".product5>.colors5>img");
+        for (var i = 0; i < colorsList.length; i++) {
+            colorsList[i].onmouseover = function () {
+                var mainImg = document.querySelector(".product5>.mainpicture5");
+                mainImg.src = this.src;
+            }
+        }
+    </script>
+</div>
+

@@ -1,0 +1,72 @@
+﻿@model _2001216311_VuThiHuyenVi_DoAn.Models.User
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+<link href="~/Css/account.css" rel="stylesheet" />
+<link href="~/Css/header2.css" rel="stylesheet" />
+<link href="~/Css/bootstrap9c74.css" rel="stylesheet" />
+<link href="~/Css/main9c74.css" rel="stylesheet" />
+
+<div class="BACKGROUD">
+    <ul class="breadcrumb">
+        <li class="home">
+            <a href="/"><span>Trang chủ</span></a>
+            <span class="mr_lr">&nbsp;/&nbsp;</span>
+        </li>
+        <li><strong><span style="color: #FFAB00">Đăng nhập tài khoản</span></strong></li>
+    </ul>
+</div>
+<section class="section">
+    <div class="container">
+        <div class="wrap_background_aside padding-bottom-40 page_login">
+            <div class="row">
+                <div class="col-12 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
+
+                    <div class="page-login">
+                        <div id="login">
+                            <h1>
+                                Đăng nhập
+                            </h1>
+                            <p class="des">
+                                Nếu bạn có một tài khoản, xin vui lòng đăng nhập
+                            </p>
+                            @*<form method="post" action="/Home/Index" id="customer_login" accept-charset="UTF-8">*@
+                                @using (Html.BeginForm("Login", "User", FormMethod.Post))
+                                {
+                                    <input name="FormType" type="hidden" value="customer_login"><input name="utf8" type="hidden" value="true">
+                                    <div class="form-signup margin-bottom-15" style="color:red;">
+
+                                    </div>
+                                    <div class="form-signup clearfix">
+                                        <fieldset class="form-group">
+                                            @Html.LabelFor(model => model.UserName)
+                                            @Html.TextBoxFor(model => model.UserName, new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+
+                                        </fieldset>
+                                        <fieldset class="form-group">
+                                            @Html.LabelFor(model => model.Password)
+                                            @Html.TextBoxFor(model => model.Password, new { @class = "form-control", type = "password" })
+                                            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                                        </fieldset>
+
+                                    </div>
+                                    <div class="pull-xs-left button_bottom a-center">
+                                        <button class="btn btn-style btn_50 btn-login" type="submit" value="Đăng nhập">Đăng nhập</button>
+                                        <span class="or">
+                                            Bạn chưa có tài khoản? Đăng ký
+                                            <a href="/User/Register/Index" style="text-decoration: underline;" class="btn-link-style  btn-style margin-right-0">tại đây</a>
+                                        </span>
+                                    </div>
+                                }
+                                @*</form>*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
